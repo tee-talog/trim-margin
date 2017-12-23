@@ -13,10 +13,10 @@
   },
   "keywords": [
     "JavaScript",
-	"TypeScript",
-	"npm module",
-	"stripMargin",
-	"trimMargin"
+    "TypeScript",
+    "npm module",
+    "stripMargin",
+    "trimMargin"
   ],
   "author": "tee-talog",
   "license": "MIT",
@@ -24,5 +24,12 @@
     "url": "https://github.com/tee-talog/strip-indent/issues"
   },
   "homepage": "https://github.com/tee-talog/strip-indent#readme",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^8.5.2",
+    "browserify": "^14.5.0",
+    "tsify": "^3.0.4",
+    "tslib": "^1.8.1",
+    "typescript": "^2.6.2"
+  }
 }
