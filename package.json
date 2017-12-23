@@ -1,0 +1,28 @@
+{
+  "name": "strip-indent",
+  "version": "0.0.1",
+  "description": "\"stripMargin\" like Scala and \"trimMargin\" like Kotlin.",
+  "main": "lib/index.js",
+  "scripts": {
+    "lib": "tsc -p src/ts/tsconfig.json --outDir ./lib",
+    "example": "browserify example/example.ts --debug -p [ tsify --inlineSourceMap -p example/tsconfig.json ] > example/example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tee-talog/strip-indent.git"
+  },
+  "keywords": [
+    "JavaScript",
+	"TypeScript",
+	"npm module",
+	"stripMargin",
+	"trimMargin"
+  ],
+  "author": "tee-talog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tee-talog/strip-indent/issues"
+  },
+  "homepage": "https://github.com/tee-talog/strip-indent#readme",
+  "private": true
+}
