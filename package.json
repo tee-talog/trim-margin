@@ -22,7 +22,7 @@
     "url": "https://github.com/tee-talog/strip-indent/issues"
   },
   "homepage": "https://github.com/tee-talog/strip-indent#readme",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "jest": "^22.0.4"
   }
