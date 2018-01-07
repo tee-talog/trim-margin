@@ -1,7 +1,7 @@
 {
   "name": "strip-indent",
   "version": "0.0.1",
-  "description": "\"stripMargin\" like Scala and \"trimMargin\" like Kotlin.",
+  "description": "\"stripIndent\" (original), \"stripMargin\" like Scala and \"trimMargin\" like Kotlin.",
   "main": "src/js/index.js",
   "scripts": {
     "test": "jest"
