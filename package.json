@@ -1,27 +1,27 @@
 {
-  "name": "strip-indent",
+  "name": "trim-margin",
   "version": "0.0.1",
-  "description": "\"stripIndent\" (original), \"stripMargin\" like Scala and \"trimMargin\" like Kotlin.",
+  "description": "\"trimMargin\" like Kotlin and \"stripMargin\" like Scala.",
   "main": "src/js/index.js",
   "scripts": {
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tee-talog/strip-indent.git"
+    "url": "git+https://github.com/tee-talog/trim-margin.git"
   },
   "keywords": [
     "JavaScript",
     "npm module",
-    "stripMargin",
-    "trimMargin"
+    "trimMargin",
+    "stripMargin"
   ],
   "author": "tee-talog",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tee-talog/strip-indent/issues"
+    "url": "https://github.com/tee-talog/trim-margin/issues"
   },
-  "homepage": "https://github.com/tee-talog/strip-indent#readme",
+  "homepage": "https://github.com/tee-talog/trim-margin#readme",
   "private": false,
   "devDependencies": {
     "jest": "^22.0.4"

@@ -1,3 +1,2 @@
-# strip-indent
-`stripIndent` (original), `stripMargin` like Scala and `trimMargin` like Kotlin.
-
+# trim-margin
+`trimMargin` like Kotlin and `stripMargin` like Scala.
