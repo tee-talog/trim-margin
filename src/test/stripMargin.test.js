@@ -48,6 +48,19 @@ describe("function stripMargin", () => {
 });
 
 describe("sm tag", () => {
+	test("tagged", () => {
+		expect(sm`
+        |a
+        |`).toBe("\na\n");
+	});
+	test("indented embedded variable", () => {
+		const aaa = `    |aaa`;
+		const bbb = `    | bbb`;
+		expect(sm`\
+            ${aaa}
+            |${bbb}`)
+			.toBe("aaa\n    | bbb");
+	});
 });
 
 
