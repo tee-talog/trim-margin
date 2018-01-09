@@ -4,7 +4,7 @@
 ## Features
 * Indent in a string literal.
 * Selectable APIs: `trimMargin` or `stripMargin`.
-* Use with tagged template literals.
+* Use as tagged template literals.
 * Inject to string type.
 
 ## install
@@ -92,7 +92,7 @@ You can use it like method of string type.
 
 #### methodName
 
-Method name that is injected to string type.
+Method name injected into string type.
 
 ## License
 MIT © tee-talog
