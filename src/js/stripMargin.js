@@ -22,8 +22,9 @@ const sm = function sm (strings, ...values) {
 		// Error
 		throw new Error("Please call as Tagged template literals. (e.g. sm`Hello ${name}`)");
 	}
-	const marged = strings.reduce((prev, current, index) => [prev, values[index - 1], current]);
-	return stripMargin((typeof marged === "string") ? marged : marged.join(""));
+	return stripMargin(
+		strings.reduce(
+			(prev, current, index) => prev + values[index - 1] + current));
 };
 
 
