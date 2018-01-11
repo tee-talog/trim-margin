@@ -55,7 +55,8 @@ Indented string.
 #### delimiter
 
 Indent delimiter.
-defalut: `/\|/`
+This is used as an argument to a `RegExp` object.
+defalut: `"\\|"`
 
 ### stripMargin(str, [delimiter])
 
