@@ -1,4 +1,4 @@
-const defalutDelimiter = "|";
+const defalutDelimiter = "\\|";
 
 module.exports = {
 	defalutDelimiter,
