@@ -1,30 +1,30 @@
 const { defalutDelimiter } = require("./config");
-const { stripMargin, sm } = require("./stripMargin");
+const { trimMargin, stm } = require("./trimMargin");
 
 const injectTo = function injectTo (methodName) {
 	String.prototype[methodName] = function (str, delimiter = defalutDelimiter) {
-		return stripMargin(this, delimiter);
+		return trimMargin(this, delimiter);
 	};
-};
-
-const injectStripMargin = function injectStripMargin () {
-	injectTo("stripMargin");
 };
 
 const injectTrimMargin = function injectTrimMargin () {
 	injectTo("trimMargin");
 };
 
+const injectStripMargin = function injectStripMargin () {
+	injectTo("stripMargin");
+};
+
 const inject = function inject () {
-	injectStripMargin();
 	injectTrimMargin();
+	injectStripMargin();
 };
 
 
 module.exports = {
 	injectTo,
-	injectStripMargin,
 	injectTrimMargin,
+	injectStripMargin,
 	inject,
 };
 
