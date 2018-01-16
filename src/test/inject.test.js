@@ -1,14 +1,14 @@
 const {
 	injectTo,
-	injectStripMargin,
 	injectTrimMargin,
+	injectStripMargin,
 	inject
 } = require("../js/inject");
 
 const methodName = "testMethod";
 const deleteInjectedMethods = () => {
-	String.prototype.stripMargin = undefined;
 	String.prototype.trimMargin = undefined;
+	String.prototype.stripMargin = undefined;
 	String.prototype[methodName] = undefined;
 };
 
@@ -21,12 +21,12 @@ describe("inject", () => {
 		deleteInjectedMethods();
 	});
 
-	test("inject stripMargin", () => {
-		expect(`a`.stripMargin()).toBe("a");
-	});
-
 	test("inject trimMargin", () => {
 		expect(`a`.trimMargin()).toBe("a");
+	});
+
+	test("inject stripMargin", () => {
+		expect(`a`.stripMargin()).toBe("a");
 	});
 
 	test("inject original method name", () => {

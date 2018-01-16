@@ -1,55 +1,55 @@
-const { stripMargin, sm } = require("../js/stripMargin");
+const { trimMargin, tm } = require("../js/trimMargin");
 
-describe("function stripMargin", () => {
+describe("function trimMargin", () => {
 	test("normal string", () => {
-		expect(stripMargin(`a`)).toBe("a");
+		expect(trimMargin(`a`)).toBe("a");
 	});
 
 	test("return, indent", () => {
-		expect(stripMargin(`a
+		expect(trimMargin(`a
         |a`)).toBe("a\na");
 	});
 
 	test("return, 8 spaces", () => {
-		expect(stripMargin(`a
+		expect(trimMargin(`a
         a`)).toBe("a\n        a");
 	});
 
 	test("blank line", () => {
-		expect(stripMargin(`
+		expect(trimMargin(`
 
         |`)).toBe("\n\n");
 	});
 
 	test("mix", () => {
-		expect(stripMargin(`
+		expect(trimMargin(`
         a
         |a
         |`)).toBe("\n        a\na\n");
 	});
 
 	test("interpolation", () => {
-		expect(stripMargin(`a${0}a`)).toBe("a0a");
+		expect(trimMargin(`a${0}a`)).toBe("a0a");
 	});
 
 	test("interpolation mix", () => {
-		expect(stripMargin(`${0}
+		expect(trimMargin(`${0}
         |${0}
         ${0}
         |${0}`)).toBe("0\n0\n        0\n0");
 	});
 
 	test("change delimiter", () => {
-		expect(stripMargin(`${0}
+		expect(trimMargin(`${0}
         #a
         ${0}
         #`, "#")).toBe("0\na\n        0\n");
 	});
 });
 
-describe("sm tag", () => {
+describe("tm tag", () => {
 	test("non-embedded", () => {
-		expect(sm`
+		expect(tm`
         |a
         |`).toBe("\na\n");
 	});
@@ -57,7 +57,7 @@ describe("sm tag", () => {
 		test("first variable", () => {
 			const aaa = `    |aaa`;
 			const bbb = `    | bbb`;
-			expect(sm`${aaa}
+			expect(tm`${aaa}
 				|${bbb}
 				|ccc`)
 				.toBe("aaa\n    | bbb\nccc");
@@ -65,7 +65,7 @@ describe("sm tag", () => {
 		test("last variable", () => {
 			const aaa = `    |aaa`;
 			const bbb = `    | bbb`;
-			expect(sm`\
+			expect(tm`\
 				${aaa}
 				|${bbb}`)
 				.toBe("aaa\n    | bbb");
