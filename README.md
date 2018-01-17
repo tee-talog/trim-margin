@@ -1,6 +1,8 @@
 # trim-margin
 `trimMargin` like Kotlin and `stripMargin` like Scala.
 
+[![NPM](https://nodei.co/npm/trim-margin.png)](https://nodei.co/npm/trim-margin/)
+
 ## Features
 * Indent in a string literal.
 * Selectable APIs: `trimMargin` or `stripMargin`.
