@@ -32,5 +32,9 @@ describe("inject", () => {
 	test("inject original method name", () => {
 		expect(`a`[methodName]()).toBe("a");
 	});
+
+	test("change delimiter after inject", () => {
+		expect(`    #a`.trimMargin("#")).toBe("a");
+	});
 });
 
