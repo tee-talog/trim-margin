@@ -2,7 +2,7 @@ const { defalutDelimiter } = require("./config");
 const { trimMargin, stm } = require("./trimMargin");
 
 const injectTo = function injectTo (methodName) {
-	String.prototype[methodName] = function (str, delimiter = defalutDelimiter) {
+	String.prototype[methodName] = function (delimiter = defalutDelimiter) {
 		return trimMargin(this, delimiter);
 	};
 };
