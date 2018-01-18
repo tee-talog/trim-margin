@@ -1,4 +1,4 @@
-const { stripMargin, sm } = require("./stripMargin");
+const { trimMargin, tm } = require("./trimMargin");
 const {
 	injectTo,
 	injectStripMargin,
@@ -7,17 +7,17 @@ const {
 } = require("./inject");
 
 
-const trimMargin = stripMargin;
-const tm = sm;
+const stripMargin = trimMargin;
+const sm = tm;
 
 module.exports = {
-	stripMargin,
 	trimMargin,
-	sm,
+	stripMargin,
 	tm,
+	sm,
 	injectTo,
-	injectStripMargin,
 	injectTrimMargin,
+	injectStripMargin,
 	inject,
 };
 

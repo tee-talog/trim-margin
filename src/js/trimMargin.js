@@ -1,6 +1,6 @@
 const { defalutDelimiter } = require("./config");
 
-const stripMargin = function stripMargin (str, delimiter = defalutDelimiter) {
+const trimMargin = function trimMargin (str, delimiter = defalutDelimiter) {
 	if (delimiter === defalutDelimiter) {
 		// Default delimiter is faster than other delimiter.
 		return str
@@ -17,19 +17,19 @@ const stripMargin = function stripMargin (str, delimiter = defalutDelimiter) {
 };
 
 
-const sm = function sm (strings, ...values) {
+const tm = function tm (strings, ...values) {
 	if (strings.length !== values.length + 1) {
 		// Error
-		throw new Error("Please call as Tagged template literals. (e.g. sm`Hello ${name}`)");
+		throw new Error("Please call as Tagged template literals. (e.g. tm`Hello ${name}`)");
 	}
-	return stripMargin(
+	return trimMargin(
 		strings.reduce(
 			(prev, current, index) => prev + values[index - 1] + current));
 };
 
 
 module.exports = {
-	stripMargin,
-	sm,
+	trimMargin,
+	tm,
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "trim-margin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "\"trimMargin\" like Kotlin and \"stripMargin\" like Scala.",
   "main": "src/js/index.js",
   "scripts": {

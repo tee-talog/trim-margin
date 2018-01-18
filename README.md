@@ -1,5 +1,9 @@
 # trim-margin
+[![Build Status](https://travis-ci.org/tee-talog/trim-margin.svg?branch=master)](https://travis-ci.org/tee-talog/trim-margin)
+
 `trimMargin` like Kotlin and `stripMargin` like Scala.
+
+[![NPM](https://nodei.co/npm/trim-margin.png)](https://nodei.co/npm/trim-margin/)
 
 ## Features
 * Indent in a string literal.
