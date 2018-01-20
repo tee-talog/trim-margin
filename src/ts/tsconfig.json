@@ -1,9 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "extends": "../../tsconfig.json",
-    "declaration": true,
-    "declarationDir": "../../lib",
+    "rootDir": "..",
     "allowJs": true
   }
 }
