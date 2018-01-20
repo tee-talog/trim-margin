@@ -20,7 +20,7 @@ const trimMargin = function trimMargin (str, delimiter = defalutDelimiter) {
 const tm = function tm (strings, ...values) {
 	if (strings.length !== values.length + 1) {
 		// Error
-		throw new Error("Please call as Tagged template literals. (e.g. tm`Hello ${name}`)");
+		throw new Error("You should call this as Tagged template literals.");
 	}
 	return trimMargin(
 		strings.reduce(
