@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "lib": "tsc -p stc/ts/tsconfig.json --outDir ./lib",
+    "lib": "tsc -p src/ts/tsconfig.json --outDir ./lib",
     "test": "jest"
   },
   "repository": {
