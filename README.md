@@ -28,7 +28,12 @@ console.log(trimMargin(`
 	|trim
     | indent
         | spaces`));
-// => "\ntrim\n indent\n spaces
+// => "\ntrim\n indent\n spaces"
+
+console.log(trimMargin(`
+    #other
+    # delimiter`, "#"));
+// => "other\n delimiter"
 
 const template = `    | template`;
 const literal  = `    | literal`;
@@ -41,9 +46,8 @@ console.log(tm`\
 inject();
 console.log(`\
     |inject
-    | to
-    | string`.trimMargin());
-// => "inject\n to\n string"
+ to | string`.trimMargin());
+// => "inject\n to string"
 ```
 
 ## API
@@ -51,6 +55,14 @@ console.log(`\
 ### trimMargin(str, [delimiter])
 
 Trim indent spaces.
+
+More detail "spaces":
+
+> Matches a single character other than white space. Equivalent to `[^ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]`.
+
+From: [MDN web docs](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions#special-non-white-space)
+
+Expect, `/\r?\n/`
 
 #### str
 
