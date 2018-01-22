@@ -1,10 +1,10 @@
-import { trimMargin, tm } from "../js/trimMargin";
+import { trimMargin, tm } from "./trimMargin";
 import {
 	injectTo,
 	injectStripMargin,
 	injectTrimMargin,
 	inject,
-} from "../js/inject";
+} from "./inject";
 
 
 const stripMargin = trimMargin;
