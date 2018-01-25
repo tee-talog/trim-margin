@@ -27,9 +27,17 @@
   "homepage": "https://github.com/tee-talog/trim-margin#readme",
   "private": false,
   "devDependencies": {
+    "@types/jest": "^22.1.0",
     "@types/node": "^9.3.0",
     "jest": "^22.0.4",
     "tslib": "^1.9.0",
     "typescript": "^2.6.2"
+  },
+  "jest": {
+    "moduleFileExtensions": ["ts", "js"],
+    "transform": {
+      "^.+\\.ts$": "<rootDir>/test-preprocessor.js"
+    },
+    "testMatch": ["**/__tests__/*.(ts|js)"]
   }
 }

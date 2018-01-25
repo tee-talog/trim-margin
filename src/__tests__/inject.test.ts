@@ -3,7 +3,7 @@ const {
 	injectTrimMargin,
 	injectStripMargin,
 	inject
-} = require("../js/inject");
+} = require("../ts/inject");
 
 const methodName = "testMethod";
 const deleteInjectedMethods = () => {
