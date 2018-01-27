@@ -1,4 +1,4 @@
-const { trimMargin, tm } = require("../js/trimMargin");
+import { trimMargin, tm } from "../ts/trimMargin";
 
 describe("function trimMargin", () => {
 	test("normal string", () => {
