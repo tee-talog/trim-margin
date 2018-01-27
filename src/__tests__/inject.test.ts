@@ -1,9 +1,9 @@
-const {
+import {
 	injectTo,
 	injectTrimMargin,
 	injectStripMargin,
 	inject
-} = require("../ts/inject");
+} from "../ts/inject";
 
 const methodName = "testMethod";
 const deleteInjectedMethods = () => {
