@@ -1,6 +1,6 @@
 const defalutDelimiter = "\\|";
 
-module.exports = {
+export {
 	defalutDelimiter,
 };
 

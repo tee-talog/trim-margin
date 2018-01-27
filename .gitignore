@@ -20,3 +20,6 @@ pids
 # dotenv environment variables file
 .env
 
+# Except compiled files
+lib/
+
