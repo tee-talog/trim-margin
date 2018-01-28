@@ -33,7 +33,7 @@ console.log(trimMargin(`
 console.log(trimMargin(`
     #other
     # delimiter`, "#"));
-// => "other\n delimiter"
+// => "\nother\n delimiter"
 
 const template = `    | template`;
 const literal  = `    | literal`;
@@ -47,7 +47,7 @@ inject();
 console.log(`\
     |inject
  to | string`.trimMargin());
-// => "inject\n to string"
+// => "inject\n to | string"
 ```
 
 ## API
@@ -60,7 +60,7 @@ More detail "spaces":
 
 > Matches a single character other than white space. Equivalent to `[^ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]`.
 
-From: [MDN web docs](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions#special-non-white-space)
+From: [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 Expect, `/\r?\n/`
 
@@ -89,22 +89,22 @@ Same `tm`.
 
 ### inject
 
-Inject to `string.prototype`: `trimMargin` and `stripMargin`.
+Inject to `String`: `trimMargin` and `stripMargin`.
 You can use it like method of string type.
 
 ### injectTrimMargin
 
-Inject to `string.prototype`: `trimMargin`.
+Inject to `String`: `trimMargin`.
 You can use it like method of string type.
 
 ### injectStripMargin
 
-Inject to `string.prototype`: `stripMargin`.
+Inject to `String`: `stripMargin`.
 You can use it like method of string type.
 
 ### injectAt(methodName)
 
-Inject to `string.prototype`.
+Inject to `String`.
 You can use it like method of string type.
 
 #### methodName
