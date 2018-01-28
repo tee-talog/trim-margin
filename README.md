@@ -33,7 +33,7 @@ console.log(trimMargin(`
 console.log(trimMargin(`
     #other
     # delimiter`, "#"));
-// => "other\n delimiter"
+// => "\nother\n delimiter"
 
 const template = `    | template`;
 const literal  = `    | literal`;
@@ -47,12 +47,12 @@ inject();
 console.log(`\
     |inject
  to | string`.trimMargin());
-// => "inject\n to string"
+// => "inject\n to | string"
 ```
 
 ## API
 
-### trimMargin(str, [delimiter])
+### trimMargin(str: string, [delimiter: string]): string
 
 Trim indent spaces.
 
@@ -60,21 +60,21 @@ More detail "spaces":
 
 > Matches a single character other than white space. Equivalent to `[^ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]`.
 
-From: [MDN web docs](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions#special-non-white-space)
+From: [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 Expect, `/\r?\n/`
 
-#### str
+#### str: string
 
 Indented string.
 
-#### delimiter
+#### delimiter: string
 
 Indent delimiter.
 This is used as an argument to a `RegExp` object.
 defalut: `"\\|"`
 
-### stripMargin(str, [delimiter])
+### stripMargin(str: string, [delimiter :string]): string
 
 Same `trimMargin`.
 
@@ -87,27 +87,27 @@ Same `trimMargin(literal)`.
 
 Same `tm`.
 
-### inject
+### inject: void
 
-Inject to `string.prototype`: `trimMargin` and `stripMargin`.
+Inject to `String`: `trimMargin` and `stripMargin`.
 You can use it like method of string type.
 
-### injectTrimMargin
+### injectTrimMargin: void
 
-Inject to `string.prototype`: `trimMargin`.
+Inject to `String`: `trimMargin`.
 You can use it like method of string type.
 
-### injectStripMargin
+### injectStripMargin: void
 
-Inject to `string.prototype`: `stripMargin`.
+Inject to `String`: `stripMargin`.
 You can use it like method of string type.
 
-### injectAt(methodName)
+### injectAt(methodName: string): void
 
-Inject to `string.prototype`.
+Inject to `String`.
 You can use it like method of string type.
 
-#### methodName
+#### methodName: string
 
 Method name injected into string type.
 
