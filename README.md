@@ -52,7 +52,7 @@ console.log(`\
 
 ## API
 
-### trimMargin(str, [delimiter])
+### trimMargin(str: string, [delimiter: string]): string
 
 Trim indent spaces.
 
@@ -64,17 +64,17 @@ From: [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Gui
 
 Expect, `/\r?\n/`
 
-#### str
+#### str: string
 
 Indented string.
 
-#### delimiter
+#### delimiter: string
 
 Indent delimiter.
 This is used as an argument to a `RegExp` object.
 defalut: `"\\|"`
 
-### stripMargin(str, [delimiter])
+### stripMargin(str: string, [delimiter :string]): string
 
 Same `trimMargin`.
 
@@ -87,27 +87,27 @@ Same `trimMargin(literal)`.
 
 Same `tm`.
 
-### inject
+### inject: void
 
 Inject to `String`: `trimMargin` and `stripMargin`.
 You can use it like method of string type.
 
-### injectTrimMargin
+### injectTrimMargin: void
 
 Inject to `String`: `trimMargin`.
 You can use it like method of string type.
 
-### injectStripMargin
+### injectStripMargin: void
 
 Inject to `String`: `stripMargin`.
 You can use it like method of string type.
 
-### injectAt(methodName)
+### injectAt(methodName: string): void
 
 Inject to `String`.
 You can use it like method of string type.
 
-#### methodName
+#### methodName: string
 
 Method name injected into string type.
 
