@@ -1,16 +1,16 @@
-const { trimMargin, tm } = require("./trimMargin");
-const {
+import { trimMargin, tm } from "./trimMargin";
+import {
 	injectTo,
 	injectStripMargin,
 	injectTrimMargin,
 	inject,
-} = require("./inject");
+} from "./inject";
 
 
 const stripMargin = trimMargin;
 const sm = tm;
 
-module.exports = {
+export {
 	trimMargin,
 	stripMargin,
 	tm,
