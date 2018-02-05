@@ -34,10 +34,15 @@
     "typescript": "^2.6.2"
   },
   "jest": {
-    "moduleFileExtensions": ["ts", "js"],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
     "transform": {
       "^.+\\.ts$": "<rootDir>/test-preprocessor.js"
     },
-    "testMatch": ["**/__tests__/*.(ts|js)"]
+    "testMatch": [
+      "**/__tests__/*.(ts|js)"
+    ]
   }
 }
