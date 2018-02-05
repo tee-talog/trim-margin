@@ -1,10 +1,10 @@
 {
   "name": "trim-margin",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "\"trimMargin\" like Kotlin and \"stripMargin\" like Scala.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
-  "private": true,
+  "private": false,
   "scripts": {
     "prepublish": "npm run lib",
     "lib": "tsc -p src/ts/tsconfig.json --outDir ./lib",
