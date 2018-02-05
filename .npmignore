@@ -1,0 +1,8 @@
+.editorconfig
+.git/
+.gitignore
+.travis.yml
+src/
+test-preprocessor.js
+tsconfig.json
+
