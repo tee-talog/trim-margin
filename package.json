@@ -1,14 +1,15 @@
 {
   "name": "trim-margin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "\"trimMargin\" like Kotlin and \"stripMargin\" like Scala.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "private": false,
   "scripts": {
     "prepublish": "npm run lib",
-    "lib": "tsc -p src/ts/tsconfig.json --outDir ./lib",
-    "test": "jest"
+    "format": "prettier --config .prettierrc src/ts/**/*.ts --write",
+    "lib": "npm run prettier && tsc -p src/ts/tsconfig.json --outDir ./lib",
+    "test": "npm run prettier && jest"
   },
   "repository": {
     "type": "git",
@@ -27,11 +28,12 @@
   },
   "homepage": "https://github.com/tee-talog/trim-margin#readme",
   "devDependencies": {
-    "@types/jest": "^22.2.3",
-    "@types/node": "^9.6.9",
-    "jest": "^22.4.3",
-    "tslib": "^1.9.0",
-    "typescript": "^2.8.3"
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.3",
+    "jest": "^24.8.0",
+    "prettier": "^1.17.1",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
   },
   "jest": {
     "moduleFileExtensions": [
