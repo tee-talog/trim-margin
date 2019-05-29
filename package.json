@@ -8,8 +8,8 @@
   "scripts": {
     "prepublish": "npm run lib",
     "format": "prettier --config .prettierrc src/ts/**/*.ts --write",
-    "lib": "npm run prettier && tsc -p src/ts/tsconfig.json --outDir ./lib",
-    "test": "npm run prettier && jest"
+    "lib": "npm run format && tsc -p src/ts/tsconfig.json --outDir ./lib",
+    "test": "npm run format && jest"
   },
   "repository": {
     "type": "git",
