@@ -7,8 +7,9 @@
   "private": true,
   "scripts": {
     "prepublish": "npm run lib",
-    "lib": "tsc -p src/ts/tsconfig.json --outDir ./lib",
-    "test": "jest"
+    "format": "prettier --config .prettierrc src/ts/**/*.ts --write",
+    "lib": "npm run prettier && tsc -p src/ts/tsconfig.json --outDir ./lib",
+    "test": "npm run prettier && jest"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "@types/jest": "^24.0.13",
     "@types/node": "^12.0.3",
     "jest": "^24.8.0",
+    "prettier": "^1.17.1",
     "tslib": "^1.9.3",
     "typescript": "^3.4.5"
   },

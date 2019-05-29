@@ -1,8 +1,3 @@
-const defalutDelimiter = "\\|";
+const defalutDelimiter = "\\|"
 
-export {
-	defalutDelimiter,
-};
-
-
-
+export { defalutDelimiter }
